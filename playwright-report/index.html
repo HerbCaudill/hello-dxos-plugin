@@ -9359,47 +9359,49 @@ Error generating stack: ` +
               (s.state = Q),
               Il(e, a, s, l),
               Vl())
-            var Y = e.memoizedState
-            (
-              h !== k ||
-              Q !== Y ||
-              wn ||
-              (t !== null && t.dependencies !== null && $i(t.dependencies))
-            ) ?
-              (typeof g == "function" && (bs(e, n, g, a), (Y = e.memoizedState)),
+            var Y =
               (
-                (X =
-                  wn ||
-                  w0(e, n, X, a, Q, Y, S) ||
-                  (t !== null && t.dependencies !== null && $i(t.dependencies)))
+                e.memoizedState(
+                  h !== k ||
+                    Q !== Y ||
+                    wn ||
+                    (t !== null && t.dependencies !== null && $i(t.dependencies)),
+                )
               ) ?
-                (B ||
-                  (typeof s.UNSAFE_componentWillUpdate != "function" &&
-                    typeof s.componentWillUpdate != "function") ||
-                  (typeof s.componentWillUpdate == "function" && s.componentWillUpdate(a, Y, S),
-                  typeof s.UNSAFE_componentWillUpdate == "function" &&
-                    s.UNSAFE_componentWillUpdate(a, Y, S)),
-                typeof s.componentDidUpdate == "function" && (e.flags |= 4),
-                typeof s.getSnapshotBeforeUpdate == "function" && (e.flags |= 1024))
+                (typeof g == "function" && (bs(e, n, g, a), (Y = e.memoizedState)),
+                (
+                  (X =
+                    wn ||
+                    w0(e, n, X, a, Q, Y, S) ||
+                    (t !== null && t.dependencies !== null && $i(t.dependencies)))
+                ) ?
+                  (B ||
+                    (typeof s.UNSAFE_componentWillUpdate != "function" &&
+                      typeof s.componentWillUpdate != "function") ||
+                    (typeof s.componentWillUpdate == "function" && s.componentWillUpdate(a, Y, S),
+                    typeof s.UNSAFE_componentWillUpdate == "function" &&
+                      s.UNSAFE_componentWillUpdate(a, Y, S)),
+                  typeof s.componentDidUpdate == "function" && (e.flags |= 4),
+                  typeof s.getSnapshotBeforeUpdate == "function" && (e.flags |= 1024))
+                : (typeof s.componentDidUpdate != "function" ||
+                    (h === t.memoizedProps && Q === t.memoizedState) ||
+                    (e.flags |= 4),
+                  typeof s.getSnapshotBeforeUpdate != "function" ||
+                    (h === t.memoizedProps && Q === t.memoizedState) ||
+                    (e.flags |= 1024),
+                  (e.memoizedProps = a),
+                  (e.memoizedState = Y)),
+                (s.props = a),
+                (s.state = Y),
+                (s.context = S),
+                (a = X))
               : (typeof s.componentDidUpdate != "function" ||
                   (h === t.memoizedProps && Q === t.memoizedState) ||
                   (e.flags |= 4),
                 typeof s.getSnapshotBeforeUpdate != "function" ||
                   (h === t.memoizedProps && Q === t.memoizedState) ||
                   (e.flags |= 1024),
-                (e.memoizedProps = a),
-                (e.memoizedState = Y)),
-              (s.props = a),
-              (s.state = Y),
-              (s.context = S),
-              (a = X))
-            : (typeof s.componentDidUpdate != "function" ||
-                (h === t.memoizedProps && Q === t.memoizedState) ||
-                (e.flags |= 4),
-              typeof s.getSnapshotBeforeUpdate != "function" ||
-                (h === t.memoizedProps && Q === t.memoizedState) ||
-                (e.flags |= 1024),
-              (a = !1))
+                (a = !1))
           }
           return (
             (s = a),
@@ -11607,14 +11609,16 @@ Error generating stack: ` +
               ei(t)
               break
             case 22:
-              var e = t.stateNode
-              (
-                t.memoizedState !== null &&
-                e._visibility & 2 &&
-                (t.return === null || t.return.tag !== 13)
-              ) ?
-                ((e._visibility &= -3), xu(t))
-              : ei(t)
+              var e =
+                (
+                  t.stateNode(
+                    t.memoizedState !== null &&
+                      e._visibility & 2 &&
+                      (t.return === null || t.return.tag !== 13),
+                  )
+                ) ?
+                  ((e._visibility &= -3), xu(t))
+                : ei(t)
               break
             default:
               ei(t)
