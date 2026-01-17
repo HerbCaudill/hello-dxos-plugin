@@ -3,8 +3,8 @@ import { createRoot } from "react-dom/client"
 import { useApp } from "@dxos/app-framework"
 import { ClientPlugin, meta as clientMeta } from "@dxos/plugin-client"
 import "./index.css"
-import { RootPlugin, meta as rootMeta } from "./root-plugin"
-import { TodoPlugin, meta as todoMeta } from "./todo-plugin"
+import { RootPlugin, meta as rootMeta } from "./plugins/root"
+import { TodoPlugin, meta as todoMeta } from "./plugins/todo"
 
 const Main = () => {
   const App = useApp({
