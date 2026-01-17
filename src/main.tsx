@@ -1,13 +1,24 @@
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
 import { useApp } from "@dxos/app-framework"
+import { ClientPlugin, meta as clientMeta } from "@dxos/plugin-client"
 import "./index.css"
 import { HelloPlugin, meta } from "./plugin"
 
 const Main = () => {
   const App = useApp({
-    plugins: [HelloPlugin],
-    core: [meta.id],
+    plugins: [
+      ClientPlugin({
+        onClientInitialized: async (_context, client) => {
+          // Create identity if none exists
+          if (!client.halo.identity.get()) {
+            await client.halo.createIdentity()
+          }
+        },
+      }),
+      HelloPlugin,
+    ],
+    core: [clientMeta.id, meta.id],
     placeholder: () => (
       <div className="flex min-h-screen items-center justify-center">
         <p className="text-gray-500">Loading...</p>
