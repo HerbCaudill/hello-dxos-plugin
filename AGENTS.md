@@ -1,5 +1,27 @@
 # Agent Instructions
 
+This is a DXOS plugin project implementing a hello world site using the app-framework.
+
+## DXOS Plugin Structure
+
+The plugin is located in `src/plugin/`:
+
+- `meta.ts` - Plugin metadata (id, name, description, icon)
+- `translations.ts` - Internationalization strings
+- `HelloRoot.tsx` - Main React component rendered as the root
+- `HelloPlugin.tsx` - Plugin definition using `definePlugin` and `defineModule`
+- `index.ts` - Public exports
+
+The entry point `src/main.tsx` uses `useApp` hook from `@dxos/app-framework` to bootstrap the app with the plugin.
+
+## Key Dependencies
+
+- `@dxos/app-framework` - Core plugin framework
+- `effect` and `@effect/platform` - Effect library (peer dependency)
+- `react` v18.2.x - React (required version for app-framework compatibility)
+
+## Issue Tracking
+
 This project uses **bd** (beads) for issue tracking. Run `bd onboard` to get started.
 
 ## Quick Reference
@@ -33,8 +55,8 @@ bd sync               # Sync with git
 7. **Hand off** - Provide context for next session
 
 **CRITICAL RULES:**
+
 - Work is NOT complete until `git push` succeeds
 - NEVER stop before pushing - that leaves work stranded locally
 - NEVER say "ready to push when you are" - YOU must push
 - If push fails, resolve and retry until it succeeds
-
