@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client"
 import { useApp } from "@dxos/app-framework"
 import { ClientPlugin, meta as clientMeta } from "@dxos/plugin-client"
 import "./index.css"
-import { HelloPlugin, meta as helloMeta } from "./plugin"
+import { RootPlugin, meta as rootMeta } from "./root-plugin"
 import { TodoPlugin, meta as todoMeta } from "./todo-plugin"
 
 const Main = () => {
@@ -17,10 +17,10 @@ const Main = () => {
           }
         },
       }),
-      HelloPlugin,
+      RootPlugin,
       TodoPlugin,
     ],
-    core: [clientMeta.id, helloMeta.id, todoMeta.id],
+    core: [clientMeta.id, rootMeta.id, todoMeta.id],
     placeholder: () => (
       <div className="flex min-h-screen items-center justify-center">
         <p className="text-gray-500">Loading...</p>

@@ -4,7 +4,7 @@ export const translations = [
   {
     "en-US": {
       [meta.id]: {
-        "plugin name": "Hello",
+        "plugin name": "Root",
         greeting: "Hello, world!",
       },
     },

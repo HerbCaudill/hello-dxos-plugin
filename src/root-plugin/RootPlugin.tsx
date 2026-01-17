@@ -1,10 +1,10 @@
 import { Capabilities, Events, contributes, defineModule, definePlugin } from "@dxos/app-framework"
 
-import { HelloRoot } from "./HelloRoot"
 import { meta } from "./meta"
+import { RootRoot } from "./RootRoot"
 import { translations } from "./translations"
 
-export const HelloPlugin = definePlugin(meta, [
+export const RootPlugin = definePlugin(meta, [
   defineModule({
     id: `${meta.id}/module/translations`,
     activatesOn: Events.SetupTranslations,
@@ -16,7 +16,7 @@ export const HelloPlugin = definePlugin(meta, [
     activate: () =>
       contributes(Capabilities.ReactRoot, {
         id: `${meta.id}/root`,
-        root: HelloRoot,
+        root: RootRoot,
       }),
   }),
 ])
